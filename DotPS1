@@ -1,3 +1,4 @@
+
 # THE FANCY PS1
 
 # For Git PS1
@@ -38,7 +39,6 @@ __mkps1_time() {
 
 __mkps1_username() {
     local gray=`tput setaf 240`;
-    local cyan=`tput setaf 45`;
     local reset=`tput sgr0`;
 
     echo "\[${gray}\] \u \[${reset}\]";
@@ -55,10 +55,10 @@ __mkps1_arrows() {
 
 __mkps1_workdir() {
     local bold=`tput bold`;
-    local cyan=`tput setaf 45`;
+    local orange=`tput setaf 172`;
     local reset=`tput sgr0`;
 
-    echo "\[${bold}${cyan}\]\w\[${reset}\]";
+    echo "\[${bold}${orange}\]\w\[${reset}\]";
 }
 
 __mkps1_git() {
@@ -71,15 +71,15 @@ __mkps1_git() {
 }
 
 __mkps1_box_top() {
-    local cyan=`tput setaf 45`;
+    local orange=`tput setaf 172`;
     local reset=`tput sgr0`;
-    echo "\[${cyan}\]╭\[${reset}\]"
+    echo "\[${orange}\]╭\[${reset}\]"
 }
 
 __mkps1_box_bottom() {
-    local cyan=`tput setaf 45`;
+    local orange=`tput setaf 172`;
     local reset=`tput sgr0`;
-    echo "\[${cyan}\]╰\[${reset}\]"
+    echo "\[${orange}\]╰\[${reset}\]"
 }
 
 
