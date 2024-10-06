@@ -1,0 +1,18 @@
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+export HISTCONTROL=ignorespace:ignoredups:erasedups
+export PROMPT_COMMAND="history -a;"
+
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+alias ls='ls $LS_OPTIONS -al'
+
+alias dl='docker compose logs -f --tail 50 | lnav'
+alias mc='. /usr/share/mc/bin/mc-wrapper.sh'
+alias dc='docker compose'
+alias dcu='docker compose up -d'
+
+dcr() {
+  docker compose stop "$1"
+  docker compose up -d "$1"
+}
