@@ -7,6 +7,7 @@ export LS_OPTIONS='--color=auto'
 eval "`dircolors`"
 alias ls='ls $LS_OPTIONS -al'
 
+alias au='apt update && apt upgrade'
 alias dl='docker compose logs -f -t --tail 100 | lnav'
 alias mc='. /usr/share/mc/bin/mc-wrapper.sh'
 alias dc='docker compose'
